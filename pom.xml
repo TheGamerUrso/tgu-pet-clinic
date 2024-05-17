@@ -48,13 +48,14 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<scm>
 		<developerConnection>scm:git:https://github.com/TheGamerUrso/tgu-pet-clinic.git</developerConnection>
-	  <tag>tgu-pet-clinic-0.0.1</tag>
+	  	<tag>tgu-pet-clinic-0.0.1</tag>
   </scm>
 </project>
