@@ -38,6 +38,6 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public Owner findByLastName(String lastName) {
-        return this.findByLastName(lastName);
+        return null;
     }
 }
