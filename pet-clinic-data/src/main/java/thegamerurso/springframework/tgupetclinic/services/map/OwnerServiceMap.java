@@ -3,9 +3,9 @@ package thegamerurso.springframework.tgupetclinic.services.map;
 import java.util.Set;
 
 import thegamerurso.springframework.tgupetclinic.model.Owner;
-import thegamerurso.springframework.tgupetclinic.services.CrudService;
+import thegamerurso.springframework.tgupetclinic.services.OwnerService;
 
-public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long>
+public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService
 {
 
     @Override
@@ -31,5 +31,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements C
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return this.findByLastName(lastName);
     }
 }

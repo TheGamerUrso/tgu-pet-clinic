@@ -3,9 +3,9 @@ package thegamerurso.springframework.tgupetclinic.services.map;
 import java.util.Set;
 
 import thegamerurso.springframework.tgupetclinic.model.Vet;
-import thegamerurso.springframework.tgupetclinic.services.CrudService;
+import thegamerurso.springframework.tgupetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
 
     @Override
     public void delete(Vet object) {
