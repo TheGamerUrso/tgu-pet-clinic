@@ -2,9 +2,12 @@ package thegamerurso.springframework.tgupetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import thegamerurso.springframework.tgupetclinic.model.Owner;
 import thegamerurso.springframework.tgupetclinic.services.OwnerService;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService
 {
 

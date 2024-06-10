@@ -7,8 +7,6 @@ import thegamerurso.springframework.tgupetclinic.model.Owner;
 import thegamerurso.springframework.tgupetclinic.model.Vet;
 import thegamerurso.springframework.tgupetclinic.services.OwnerService;
 import thegamerurso.springframework.tgupetclinic.services.VetService;
-import thegamerurso.springframework.tgupetclinic.services.map.OwnerServiceMap;
-import thegamerurso.springframework.tgupetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner
@@ -16,10 +14,9 @@ public class DataLoader implements CommandLineRunner
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader()
-    {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
