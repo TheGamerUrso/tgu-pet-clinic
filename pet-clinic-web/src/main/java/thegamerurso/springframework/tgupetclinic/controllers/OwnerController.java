@@ -5,6 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import thegamerurso.springframework.tgupetclinic.services.OwnerService;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RequestMapping("/owners")
 @Controller
@@ -23,4 +26,10 @@ public class OwnerController
 
         return "owners/index";
     }
+
+    @RequestMapping("/find")
+    public String findOwners() {
+        return "notImplemented";
+    }
+    
 }
