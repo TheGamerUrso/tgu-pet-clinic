@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import thegamerurso.springframework.tgupetclinic.model.Owner;
 import thegamerurso.springframework.tgupetclinic.model.Pet;
 import thegamerurso.springframework.tgupetclinic.model.Speciality;
-import thegamerurso.springframework.tgupetclinic.services.SpecialitesService;
+import thegamerurso.springframework.tgupetclinic.services.SpecialityService;
 
 @Service
-public class SpecialityServiceMap extends AbstractMapService<Speciality,Long> implements SpecialitesService
+public class SpecialityServiceMap extends AbstractMapService<Speciality,Long> implements SpecialityService
 {
     @Override
     public Set<Speciality> findAll(){
