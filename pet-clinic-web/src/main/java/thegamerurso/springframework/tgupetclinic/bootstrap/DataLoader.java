@@ -10,9 +10,11 @@ import thegamerurso.springframework.tgupetclinic.model.Pet;
 import thegamerurso.springframework.tgupetclinic.model.PetType;
 import thegamerurso.springframework.tgupetclinic.model.Speciality;
 import thegamerurso.springframework.tgupetclinic.model.Vet;
+import thegamerurso.springframework.tgupetclinic.model.Visit;
 import thegamerurso.springframework.tgupetclinic.services.OwnerService;
 import thegamerurso.springframework.tgupetclinic.services.SpecialityService;
 import thegamerurso.springframework.tgupetclinic.services.VetService;
+import thegamerurso.springframework.tgupetclinic.services.VisitService;
 import thegamerurso.springframework.tgupetclinic.services.map.PetTypeService;
 
 @Component
@@ -22,14 +24,15 @@ public class DataLoader implements CommandLineRunner
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialitesService;
-
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-            SpecialityService specialitesService) {
+            SpecialityService specialitesService,VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialitesService = specialitesService;
+        this.visitService = visitService;
     }
 
 
@@ -95,6 +98,12 @@ public class DataLoader implements CommandLineRunner
         owner2.getPets().add(fiona);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fiona);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners...");
         
