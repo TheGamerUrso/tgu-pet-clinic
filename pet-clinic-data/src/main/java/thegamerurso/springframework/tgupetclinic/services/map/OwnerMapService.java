@@ -2,8 +2,6 @@ package thegamerurso.springframework.tgupetclinic.services.map;
 
 import java.util.Set;
 
-import javax.management.RuntimeErrorException;
-
 import org.springframework.stereotype.Service;
 
 import thegamerurso.springframework.tgupetclinic.model.Owner;
