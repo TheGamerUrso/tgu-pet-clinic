@@ -1,10 +1,13 @@
 package thegamerurso.springframework.tgupetclinic.services.map;
 
 import java.util.Set;
+
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import thegamerurso.springframework.tgupetclinic.model.PetType;
 
 @Service
+@Profile({"default","map"})
 public class PetTypeMapService extends AbstractMapService<PetType,Long> implements PetTypeService {
 
     @Override

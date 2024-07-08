@@ -2,6 +2,7 @@ package thegamerurso.springframework.tgupetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import thegamerurso.springframework.tgupetclinic.model.Speciality;
@@ -10,6 +11,7 @@ import thegamerurso.springframework.tgupetclinic.services.SpecialityService;
 import thegamerurso.springframework.tgupetclinic.services.VetService;
 
 @Service
+@Profile({"default","map"})
 public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     private final SpecialityService specialitesService;
