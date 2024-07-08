@@ -10,12 +10,12 @@ import thegamerurso.springframework.tgupetclinic.services.SpecialityService;
 import thegamerurso.springframework.tgupetclinic.services.VetService;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     private final SpecialityService specialitesService;
 
     
-    public VetServiceMap(SpecialityService specialitesService) {
+    public VetMapService(SpecialityService specialitesService) {
         this.specialitesService = specialitesService;
     }
 

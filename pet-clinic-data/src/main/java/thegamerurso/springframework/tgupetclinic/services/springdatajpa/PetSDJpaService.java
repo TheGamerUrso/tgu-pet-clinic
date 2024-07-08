@@ -28,7 +28,7 @@ public class PetSDJpaService implements PetService{
 
     @Override
     public Pet findById(Long id) {
-        petRepository.findById(id).orElse(null)
+        return petRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -46,7 +46,4 @@ public class PetSDJpaService implements PetService{
     public void deleteById(Long id) {
         petRepository.deleteById(id);
     }
-
-    
-
 }
